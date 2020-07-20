@@ -20,16 +20,12 @@ var fieldAutocomplete = {
         maxPatternLength: 32,
         keys: [
           {
-            name: 'iata',
+            name: 'name',
             weight: 0.5,
           },
           {
-            name: 'name',
+            name: 'description',
             weight: 0.3,
-          },
-          {
-            name: 'city',
-            weight: 0.2,
           },
         ],
       },
@@ -101,7 +97,7 @@ var fieldAutocomplete = {
 
   selectIndex: function ($field, index) {
     if (fieldAutocomplete.results.length >= index + 1) {
-      $field.val(fieldAutocomplete.results[index].iata);
+      $field.val(fieldAutocomplete.results[index].name);
       fieldAutocomplete.clearResults();
     }
   },
@@ -125,16 +121,11 @@ var fieldAutocomplete = {
           i +
           '">' +
           '<div><b>' +
-          r.iata +
-          '</b> - ' +
           r.name +
-          '</div>' +
+          '</b></div>' +
           '<div class="autocomplete-location">' +
-          r.city +
-          ', ' +
-          r.country +
-          '</div>' +
-          '</div>'
+          r.description +
+          '</div></div>'
         );
       });
 
