@@ -2,8 +2,8 @@
  * Make HTML text input control searchable.
  *
  * How to use:
- *   fieldAutocomplete.init({fields: '#from', data: airports})
- *   fieldAutocomplete.init({fields: '#from, #to', data: airports})
+ *   fieldAutocomplete.init({fields: '#from', data: list})
+ *   fieldAutocomplete.init({fields: '#from, #to', data: list})
  *
  * Dependencies:
  *   - jQuery: https://jquery.com/
